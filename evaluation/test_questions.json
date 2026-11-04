@@ -1,0 +1,82 @@
+[
+  {
+    "question": "How can I reset my account password?",
+    "expected_answer": "Navigate to the Account Settings page on the employee portal and select Reset Password. Enter your email and confirm identity via SMS or Authenticator App challenge. Reset links are valid for 15 minutes.",
+    "expected_sources": ["Account_Security_and_Authentication_Guide.pdf"],
+    "relevant_chunk_ids": ["doc_chunk_0"],
+    "question_type": "direct_answer",
+    "answerable": true
+  },
+  {
+    "question": "Where should an employee go to change their login credentials if they forgot their password?",
+    "expected_answer": "Employees should navigate to the Account Settings page on the employee portal and choose Reset Password.",
+    "expected_sources": ["Account_Security_and_Authentication_Guide.pdf"],
+    "relevant_chunk_ids": ["doc_chunk_0"],
+    "question_type": "paraphrased",
+    "answerable": true
+  },
+  {
+    "question": "What is the policy for account lockout after failed login attempts?",
+    "expected_answer": "An account is automatically locked after 5 consecutive failed login attempts for a duration of 30 minutes.",
+    "expected_sources": ["Account_Security_and_Authentication_Guide.pdf"],
+    "relevant_chunk_ids": ["doc_chunk_1"],
+    "question_type": "direct_answer",
+    "answerable": true
+  },
+  {
+    "question": "What happens if an API client exceeds the standard rate limit, and what is the overage fee for extra requests?",
+    "expected_answer": "Exceeding the limit results in HTTP 429 Too Many Requests with a Retry-After header. In billing, overages are charged at $0.05 per 1,000 additional API requests.",
+    "expected_sources": ["API_Configuration_and_Rate_Limits_v2.md", "Billing_Usage_Tiers_and_Policies.html"],
+    "relevant_chunk_ids": ["doc_api_chunk", "doc_billing_chunk"],
+    "question_type": "multi_document",
+    "answerable": true
+  },
+  {
+    "question": "What is the maximum API request limit per hour?",
+    "expected_answer": "Conflicting documentation detected: Version 2.0 specifies a maximum of 1000 requests per hour, while legacy Version 1.0 documents 500 requests per hour.",
+    "expected_sources": ["API_Configuration_and_Rate_Limits_v2.md", "API_Configuration_and_Rate_Limits_v1_Legacy.txt"],
+    "relevant_chunk_ids": ["api_v2", "api_v1"],
+    "question_type": "conflicting_evidence",
+    "answerable": true
+  },
+  {
+    "question": "What authentication headers are required for the v2 API compared to legacy v1?",
+    "expected_answer": "In v2, the X-API-Key header and Bearer token are required, whereas v1 allowed query parameter token exchange (?api_token=xyz) or standard Bearer headers.",
+    "expected_sources": ["API_Configuration_and_Rate_Limits_v2.md", "API_Configuration_and_Rate_Limits_v1_Legacy.txt"],
+    "relevant_chunk_ids": ["api_v2_auth", "api_v1_auth"],
+    "question_type": "version_sensitive",
+    "answerable": true
+  },
+  {
+    "question": "What is the limit?",
+    "expected_answer": "Clarification required: The question lacks specific context regarding whether it pertains to API rate limits, session timeout, account lockouts, or billing quotas.",
+    "expected_sources": ["API_Configuration_and_Rate_Limits_v2.md", "Account_Security_and_Authentication_Guide.pdf"],
+    "relevant_chunk_ids": [],
+    "question_type": "ambiguous",
+    "answerable": true
+  },
+  {
+    "question": "What is the company reimbursement policy for international business travel meals?",
+    "expected_answer": "I couldn't find sufficient supporting information in the uploaded documentation to answer this question reliably.",
+    "expected_sources": [],
+    "relevant_chunk_ids": [],
+    "question_type": "unanswerable",
+    "answerable": false
+  },
+  {
+    "question": "How do I configure quantum encryption keys for the satellite downlink?",
+    "expected_answer": "I couldn't find sufficient supporting information in the uploaded documentation to answer this question reliably.",
+    "expected_sources": [],
+    "relevant_chunk_ids": [],
+    "question_type": "unanswerable",
+    "answerable": false
+  },
+  {
+    "question": "What are the troubleshooting steps when receiving error ERR-401?",
+    "expected_answer": "Check if your SSO session expired due to the 15-minute inactivity timeout, verify your API key in the X-API-Key header has no whitespace, and ensure MFA token is synchronized.",
+    "expected_sources": ["Troubleshooting_and_FAQ.md"],
+    "relevant_chunk_ids": ["faq_auth_chunk"],
+    "question_type": "direct_answer",
+    "answerable": true
+  }
+]

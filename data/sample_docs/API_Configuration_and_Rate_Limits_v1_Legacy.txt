@@ -1,0 +1,16 @@
+API CONFIGURATION AND ARCHITECTURE SPECIFICATION (LEGACY)
+Version: v1.0
+Last Updated: 2022-01-10
+Status: Deprecated / Archived Reference
+
+SECTION 1: LEGACY PLATFORM ARCHITECTURE
+This legacy specification documents the v1 API infrastructure originally deployed in 2022. All integration partners on v1 must prepare migration plans to transition to the current v2 gateway.
+
+SECTION 2: LEGACY AUTHENTICATION
+In the v1 system, authentication was managed via basic token exchange passed in the query parameter `?api_token=xyz` or standard Bearer authorization headers.
+
+SECTION 3: USAGE THRESHOLDS AND LIMITS
+Under the v1 specification, the maximum API request limit is 500 requests per hour for standard production accounts. Any traffic exceeding 500 requests per hour is dropped immediately without buffering.
+
+SECTION 4: SERVICE LEVEL AGREEMENTS
+Legacy v1 endpoints provide an uptime guarantee of 99.5%. Critical maintenance windows are scheduled bi-weekly on Sundays at 02:00 UTC.
