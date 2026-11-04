@@ -1,6 +1,6 @@
 # Enterprise Documentation Q&A Assistant
 
-> **HCLTech Future Ready AI Engineer Hackathon**  
+ 
 > An Evidence-First, Production-Quality Retrieval-Augmented Generation (RAG) System with Verifiable Citations, Multi-Version Conflict Detection, and Intelligent Abstention.
 
 ---
